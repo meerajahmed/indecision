@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "Indecision rect app",
   "scripts": {
-    "start": "live-server public"
+    "start": "live-server public",
+    "build:jsx": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
+    "build:jsx:watch": "npm run build:jsx -- --watch"
   },
   "main": "public/index.js",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

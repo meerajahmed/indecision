@@ -1,8 +1,10 @@
+"use strict";
+
 // JSX -> JavaScript XML
 
 var template = React.createElement(
   "h1",
-  { id: "someid"},
+  { id: "app-root" },
   "Hello World"
 );
 
