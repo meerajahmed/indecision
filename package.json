@@ -5,11 +5,12 @@
   "scripts": {
     "start": "live-server public"
   },
-  "main": "index.js",
-  "dependencies": {
-  },
+  "main": "public/index.js",
+  "dependencies": {},
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "repository": {
     "type": "git",
