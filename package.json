@@ -1,0 +1,28 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "description": "Indecision rect app",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meerajahmed/indecision-app.git"
+  },
+  "keywords": [
+    "react",
+    "indecision"
+  ],
+  "author": "Meeraj Ahmed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meerajahmed/indecision-app/issues"
+  },
+  "homepage": "https://github.com/meerajahmed/indecision-app#readme"
+}
