@@ -3,9 +3,23 @@
 // JSX -> JavaScript XML
 
 var template = React.createElement(
-  "h1",
-  { id: "app-root" },
-  "Hello World"
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    "Andrew Mead"
+  ),
+  React.createElement(
+    "p",
+    null,
+    "Age: 26"
+  ),
+  React.createElement(
+    "p",
+    null,
+    "Location: Philadelphia"
+  )
 );
 
 var appRoot = document.getElementById("app");

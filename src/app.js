@@ -1,6 +1,12 @@
 // JSX -> JavaScript XML
 
-var template = <h1 id="app-root">Hello World</h1>
+var template = (
+  <div>
+    <h1>Andrew Mead</h1>
+    <p>Age: 26</p>
+    <p>Location: Philadelphia</p>
+  </div>
+);
 
 var appRoot = document.getElementById("app");
 
