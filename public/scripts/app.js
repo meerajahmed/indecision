@@ -2,23 +2,31 @@
 
 // JSX -> JavaScript XML
 
+var user = {
+  name: "Andrew Mead",
+  age: 26,
+  location: "Philadelphia"
+};
+
 var template = React.createElement(
   "div",
   null,
   React.createElement(
     "h1",
     null,
-    "Andrew Mead"
+    user.name
   ),
   React.createElement(
     "p",
     null,
-    "Age: 26"
+    "Age: ",
+    user.age
   ),
   React.createElement(
     "p",
     null,
-    "Location: Philadelphia"
+    "Location: ",
+    user.location
   )
 );
 
