@@ -43,52 +43,5 @@ var template = React.createElement(
   getLocation(user.location)
 );
 
-var count = 0;
-
-var addOne = function addOne() {
-  count++;
-  renderReactApp();
-};
-
-var minusOne = function minusOne() {
-  count--;
-  renderReactApp();
-};
-
-var reset = function reset() {
-  count = 0;
-  renderReactApp();
-};
-
 var appRoot = document.getElementById("app");
-
-var renderReactApp = function renderReactApp() {
-  var template = React.createElement(
-    "div",
-    null,
-    React.createElement(
-      "h1",
-      null,
-      "Count: ",
-      count
-    ),
-    React.createElement(
-      "button",
-      { onClick: addOne },
-      "+1"
-    ),
-    React.createElement(
-      "button",
-      { onClick: minusOne },
-      "-1"
-    ),
-    React.createElement(
-      "button",
-      { onClick: reset },
-      "reset"
-    )
-  );
-  ReactDOM.render(template, appRoot);
-};
-
-renderReactApp();
+ReactDOM.render(template, appRoot);
