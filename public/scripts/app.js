@@ -1,6 +1,8 @@
 "use strict";
 
-// JSX -> JavaScript XML
+// JSX -> JavaScript XML -> React template language
+// const -> use const when you want to catch error of variable redeclaration, assignment and block level scope
+// let -> use let if we indent to resign the variable and has block level scoping
 
 var user = {
   name: "Andrew Mead",
