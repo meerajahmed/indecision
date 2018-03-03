@@ -1,6 +1,11 @@
 // JSX -> JavaScript XML -> React template language
 // const -> use const when you want to catch error of variable redeclaration, assignment and block level scope
 // let -> use let if we indent to resign the variable and has block level scoping
+/*
+* Arrow functions:
+*   are anonymous, we cannot have named arrow functions
+*   are not bound to function arguments and this kewword
+* */
 
 const user = {
   name: "Andrew Mead",
@@ -22,6 +27,29 @@ const template = (
   </div>
 );
 
+let count = 0;
+
+const addOne = () => {
+  console.log("addOne");
+};
+
+const minusOne = () => {
+  console.log("minusOne");
+};
+
+const reset = () => {
+  console.log("reset");
+};
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne}>+1</button>
+    <button onClick={minusOne}>-1</button>
+    <button onClick={reset}>reset</button>
+  </div>
+);
+
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
