@@ -1,18 +1,18 @@
 // JSX -> JavaScript XML
 
-var user = {
+const user = {
   name: "Andrew Mead",
   age: 26,
   location: "Philadelphia"
 };
 
-var getLocation = function(location){
+function getLocation(location){
   if(location) {
     return <p>Location: {location}</p>
   }
 };
 
-var template = (
+const template = (
   <div>
     <h1>{user.name ? user.name : "Anonymous"}</h1>
     {(user.age && user.age > 17) && <p>Age: {user.age }</p>}
@@ -20,6 +20,6 @@ var template = (
   </div>
 );
 
-var appRoot = document.getElementById("app");
+const appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);

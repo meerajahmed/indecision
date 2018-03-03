@@ -8,7 +8,7 @@ var user = {
   location: "Philadelphia"
 };
 
-var getLocation = function getLocation(location) {
+function getLocation(location) {
   if (location) {
     return React.createElement(
       "p",
