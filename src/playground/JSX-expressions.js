@@ -4,7 +4,7 @@
 /*
  * Arrow functions:
  *   are anonymous, we cannot have named arrow functions
- *   are not bound to function arguments and this kewword
+ *   are not bound to function arguments and this keyword
  * */
 
 const user = {
