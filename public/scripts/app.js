@@ -1,29 +1,9 @@
 "use strict";
 
-// JSX -> JavaScript XML -> React template language
-// const -> use const when you want to catch error of variable redeclaration, assignment and block level scope
-// let -> use let if we indent to resign the variable and has block level scoping
-/*
-* Arrow functions:
-*   are anonymous, we cannot have named arrow functions
-*   are not bound to function arguments and this kewword
-* */
-
-var user = {
-  name: "Andrew Mead",
-  age: 26,
-  location: "Philadelphia"
-};
-
-function getLocation(location) {
-  if (location) {
-    return React.createElement(
-      "p",
-      null,
-      "Location: ",
-      location
-    );
-  }
+var app = {
+  title: "Indecision App",
+  subtitle: "By Andrew Mead",
+  options: []
 };
 
 var template = React.createElement(
@@ -32,15 +12,32 @@ var template = React.createElement(
   React.createElement(
     "h1",
     null,
-    user.name ? user.name : "Anonymous"
+    app.title
   ),
-  user.age && user.age > 17 && React.createElement(
+  app.subtitle && React.createElement(
     "p",
     null,
-    "Age: ",
-    user.age
+    app.subtitle
   ),
-  getLocation(user.location)
+  React.createElement(
+    "p",
+    null,
+    app.options.length > 0 ? "Here are your options" : "No options"
+  ),
+  React.createElement(
+    "ol",
+    null,
+    React.createElement(
+      "li",
+      null,
+      "Item one"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "Item two"
+    )
+  )
 );
 
 var appRoot = document.getElementById("app");
