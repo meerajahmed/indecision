@@ -21,6 +21,12 @@ var onRemoveAll = function onRemoveAll() {
   render();
 };
 
+var onMakeDecision = function onMakeDecision() {
+  var randomNum = Math.floor(Math.random() * app.options.length);
+  var option = app.options[randomNum];
+  alert(option);
+};
+
 var appRoot = document.getElementById("app");
 
 var render = function render() {
@@ -47,6 +53,11 @@ var render = function render() {
       null,
       "options: ",
       app.options.length
+    ),
+    React.createElement(
+      "button",
+      { disabled: app.options.length === 0, onClick: onMakeDecision },
+      "Make Decision"
     ),
     React.createElement(
       "button",
