@@ -5,7 +5,8 @@
   "scripts": {
     "start": "live-server public",
     "build:jsx": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
-    "build:jsx:watch": "npm run build:jsx -- --watch"
+    "build:jsx:watch": "npm run build:jsx -- --watch",
+    "build:jsx:playground": "babel src/playground/build-it-visible.js --out-file=public/scripts/app.js --presets=env,react"
   },
   "main": "public/index.js",
   "dependencies": {},
