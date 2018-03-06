@@ -15,10 +15,31 @@ class Person {
   }
 }
 
-const instructor = new Person('Andrew Mead', 26);
+class Student extends Person {
+
+  constructor(name, age, major) {
+    super(name, age);
+    this.major = major;
+  }
+
+  hasMajor() {
+    return !!this.major;
+  }
+
+  getDescription() {
+    let description = super.getDescription();
+    if( this.hasMajor() ){
+      description += ` Their major is ${this.major}`;
+    }
+    return description;
+  }
+
+}
+
+const instructor = new Student('Andrew Mead', 26, 'Computer Science');
 console.log(instructor.getGretting());
 console.log(instructor.getDescription());
 
-const me = new Person();
+const me = new Student();
 console.log(me.getGretting());
 console.log(me.getDescription());
