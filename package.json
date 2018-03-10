@@ -6,7 +6,7 @@
     "start": "live-server public",
     "build:jsx": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
     "build:jsx:watch": "npm run build:jsx -- --watch",
-    "build:jsx:playground": "babel src/playground/es6-class-1.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "build:jsx:playground": "babel src/playground/counter-state-example.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "main": "public/index.js",
   "dependencies": {},
