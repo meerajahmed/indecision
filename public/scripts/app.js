@@ -30,7 +30,48 @@ var IndecisionApp = function (_React$Component) {
     return _this;
   }
 
+  /* Component lifecycle methods */
+
+  /*
+  * Mounting: These methods are called when an instance of a component is being created and inserted into the DOM
+  *   constructor()
+  *
+  *   componentWillMount()
+  *   render()
+  *   componentDidMount()
+  *
+  * Updating: An updae can be caused by chamges to props or state.
+  * These methods are called when a component is being re-rendered.
+  *
+  *   componentWillReceiveProps()
+  *   shouldComponentUpdate()
+  *
+  *   componentWillUpdate()
+  *   render()
+  *   componentDidUpdate()
+  *
+  * Unmounting: This method is called when a component is being removed from the DOM.
+  *
+  * compoWillUnmount()
+  *
+  * */
+
   _createClass(IndecisionApp, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("componentDidMount: called first time when component gets mounted on DOM");
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      console.log("componentDidUpdate: called after props / state value changed");
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      console.log("componentWillUnmount: called before component goes away");
+    }
+  }, {
     key: "render",
     value: function render() {
       var title = "Indecision";
