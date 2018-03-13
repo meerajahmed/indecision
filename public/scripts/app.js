@@ -60,11 +60,26 @@ var IndecisionApp = function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log("componentDidMount: called first time when component gets mounted on DOM");
+      try {
+        var jsonStr = localStorage.getItem("options");
+        var options = JSON.parse(jsonStr);
+        if (options) {
+          this.setState(function () {
+            return { options: options };
+          });
+        }
+      } catch (e) {
+        console.log("Invalid JSON data");
+      }
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       console.log("componentDidUpdate: called after props / state value changed");
+      if (prevState.options.length !== this.state.options.length) {
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem("options", json);
+      }
     }
   }, {
     key: "componentWillUnmount",
@@ -184,6 +199,11 @@ var Options = function Options(props) {
       { onClick: props.handleDeleteOptions },
       "Remove All"
     ),
+    props.options.length && React.createElement(
+      "p",
+      null,
+      "Please add an option to get started"
+    ),
     props.options.map(function (option, index) {
       return React.createElement(Option, {
         key: index,
@@ -235,6 +255,9 @@ var AddOption = function (_React$Component2) {
       this.setState(function () {
         return { error: error };
       });
+      if (!error) {
+        e.target.elements.options.value = "";
+      }
     }
   }, {
     key: "render",
