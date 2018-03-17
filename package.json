@@ -4,6 +4,8 @@
   "description": "Indecision rect app",
   "scripts": {
     "start": "live-server public",
+    "build": "webpack",
+    "build:watch": "webpack --watch",
     "build:jsx": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
     "build:jsx:watch": "npm run build:jsx -- --watch",
     "build:jsx:playground": "babel src/playground/counter-state-example.js --out-file=public/scripts/app.js --presets=env,react --watch"
@@ -16,7 +18,9 @@
     "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   },
   "repository": {
     "type": "git",
