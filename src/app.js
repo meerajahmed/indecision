@@ -1,10 +1,6 @@
-import subtract, { square, add } from "./utils"
-/*
- * named export goes in { }
- * default exports can be referenced by any name
- * import anyNameHere from "./utils";
-* */
+import React from "react";
+import ReactDOM from "react-dom";
 
-console.log(square(2));
-console.log(add(2,3));
-console.log(subtract(100, 81));
+const template = <p>JXS from Webpack</p>;
+
+ReactDOM.render(template, document.getElementById("app"));
