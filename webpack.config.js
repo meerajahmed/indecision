@@ -7,11 +7,24 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-    rules: [{
-      loader: "babel-loader",
-      test: /\.js$/,
-      exclude: /node_modules/
-    }]
+    rules: [
+      {
+        loader: "babel-loader",
+        test: /\.js$/,
+        exclude: /node_modules/
+      },
+      /*
+       * css-loader : use css in JS
+       * style-loader : inject style in DOM
+       * sass-loader: import scss file in JS
+       * node-sass : transform .scss to .css
+       * use : when we have multiple loader
+       * */
+      {
+        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.scss$/
+      }
+    ]
   },
   devtool: "cheap-module-eval-source-map",
   devServer: {
