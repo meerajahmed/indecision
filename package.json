@@ -11,7 +11,11 @@
     "build:jsx:playground": "babel src/playground/counter-state-example.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "main": "public/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-modal": "^3.3.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -19,8 +23,6 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
