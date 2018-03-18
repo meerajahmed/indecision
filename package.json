@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Indecision rect app",
   "scripts": {
-    "start": "live-server public",
+    "start": "webpack-dev-server --mode=development",
     "build": "webpack",
     "build:watch": "webpack --watch --mode=development",
     "build:jsx": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
@@ -16,13 +16,14 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "live-server": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   },
   "repository": {
     "type": "git",
