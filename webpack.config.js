@@ -13,7 +13,11 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
-  devtool: "source-map"
+  devtool: "cheap-module-eval-source-map"
+  /*
+  * production: source-map
+  * development: eval-source-map, cheap-module-eval-source-map
+  * */
 };
 // loader -> customise behavior of webpack when a file is loaded
 // eg: .scss -> .css

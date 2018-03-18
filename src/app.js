@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const template = <p>JXS from Webpack</p>;
+import IndecisionApp from "./components/indecision-app";
 
-ReactDOM.render(template, document.getElementById("app"));
+const appRoot = document.getElementById("app");
+
+ReactDOM.render(<IndecisionApp options={["Option one", "Option two"]} />, appRoot);

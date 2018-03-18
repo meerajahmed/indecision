@@ -4,7 +4,8 @@ const add = (a, b) => a + b;
 
 const subtract = (a, b) => a - b;
 /*
-* default export cannot come before var declaration unlike name export.
+* default export cannot come before var declaration unlike name export,
+* with an exception of class definition
 *
 * The right way would be:
 *  1. export default subtract;
